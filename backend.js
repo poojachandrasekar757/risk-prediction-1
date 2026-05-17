@@ -99,9 +99,8 @@ app.get("/history/:username", async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 });
-
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "login.html");
+    res.sendFile(__dirname + "/public/index.html");
 });
 app.listen(3000, () => {
   console.log("🚀 Server running at http://localhost:3000");
